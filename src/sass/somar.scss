@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+$white: #e2e2e2;
+$blue: #26759B;
+
+$yellow: #F3D460;
+.choose-option {
+    padding: 10px 20px;
+    background: linear-gradient($yellow,$yellow - 15);
+    text-shadow: 0 2px 0 rgba(255,255,255,0.2);
+    border: 1px solid $yellow - 20;
+    font-size: 20px;
+    color: #555;
+    display: inline-block;
+    border-radius: 3px;
+
+    &:hover {
+        $yellow: $yellow + 10;
+        background: linear-gradient($yellow,$yellow - 15);
+        border-color: $yellow - 50;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    &:active {
+        background: linear-gradient($yellow - 25,$yellow);
+    }
+
+    svg {
+        margin-right: 20px;
+    }
+}
+
+.tabs {
+     li.is-active a {
+        border-bottom-color: $blue;
+        color: $blue;
+        font-weight: bold;
+    }
+}
+
+.notification {
+    padding: 10px 10px;
+}
+
+.field {
+    label {
+        font-weight: bold;
+    }
+    .control {
+        padding-top: 5px;
+    }
+}
+
+button.is-warning {
+    background: linear-gradient($yellow,$yellow - 15);
+    text-shadow: 0 2px 0 rgba(255,255,255,0.2);
+    border: 1px solid $yellow - 20;
+    color: #555;
+
+    &:hover {
+        $yellow: $yellow + 10;
+        background: linear-gradient($yellow,$yellow - 15);
+        border-color: $yellow - 50;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+}
+
+.is-pseudotable {
+    .column {
+        background: #eee;
+        border: 1px solid #CCC;
+        margin: 2px;
+        color: #444;
+        border-radius: 3px;
+
+        strong {
+        border-bottom: 1px dashed #999;
+        }
+    }
+}
+
+.table.is-hoverable {
+    th {
+        text-align: center;
+
+        a {
+            color: inherit;
+            transition: all 0.2s;
+            font-size: 12px;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+    tr {
+        td {
+            text-align: center;
+            small {
+                font-size: 12px;
+            }
+        }
+        &:hover {
+            background: rgba(0,0,0,0.1) !important;
+        }
+    }
+}
+
+.modal-card {
+    &.is-large {
+        width: 80%;
+    }
+}
+
+button {
+    svg {
+        margin-right: 5px;
+    }
+}
+
+.toast {
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    color: #FFF;
+    text-shadow: rgba(0,0,0,0.1);
+    opacity: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 9999999999;
+
+    &.active {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    z-index: 999999999;
+    background: rgba(0,0,0,0.8);
+    padding: 5px 30px 15px 30px;
+    color: #ffffff;
+    border-radius: 5px;
+    display: none;
+
+    &::after {
+        content: 'Carregando';
+        font-size: 12px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.notification {
+    background: rgba(0,0,0,0.2);
+}
+
+.pagination {
+    margin-top: 10px;
+}
